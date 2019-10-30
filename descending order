@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+	//array declaration
+	int arr[10];
+	int n, i, j;
+	int temp;
+
+
+
+
+	//read n elements
+	for (i = 0; i < 10; i++)
+	{
+		cout << "Enter element [" << i + 1 << "] ";
+		cin >> arr[i];
+	}
+
+	//print input elements
+	cout << "Unsorted Array elements:" << endl;
+	for (i = 0; i < 10; i++)
+		cout << arr[i] << "\t";
+	cout << endl;
+
+	//sorting - Descending ORDER
+	for (i = 0; i < 10; i++)
+	{
+		for (j = i + 1; j < 10; j++)
+		{
+			if (arr[i] < arr[j])
+			{
+				temp = arr[i];
+				arr[i] = arr[j];
+				arr[j] = temp;
+			}
+		}
+	}
+
+	//print sorted array elements
+	cout << "Sorted (Descending Order) Array elements:" << endl;
+	for (i = 0; i < 10; i++)
+		cout << arr[i] << "\t";
+	cout << endl;
+
+	return 0;
+}
